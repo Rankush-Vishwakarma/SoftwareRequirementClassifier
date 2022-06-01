@@ -1,0 +1,9 @@
+pandas
+nltk
+unicodedata2
+spacy==3.3.0
+contractions
+textblob==0.17.1
+transformers==4.19.2
+flask==2.0.3
+tensorflow==2.8.0

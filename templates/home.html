@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #105050;
+        }
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-size:20px;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+
+            .button1:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+        }
+
+            .button2:hover {
+                background-color: #008CBA;
+                color: white;
+            }
+
+        .menuButtons {
+            color: white;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        textarea#styled {
+            width: 600px;
+            height: 120px;
+            border: 3px solid #cccccc;
+            padding: 5px;
+            font-family: Tahoma, sans-serif;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
+        #fileUpload {
+            !margin-top: 200px;
+            !margin-left:200px;
+            position: fixed;
+            left: 50%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+        }
+        #myform {
+            margin-top: 100px;
+            margin-left: 40px;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .Submitbutton {
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 100px;
+            margin-left: 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: #105050;
+            color: #105050;
+            border: 2px solid #4CAF50;
+        }
+        #showText {
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        #fileDownload {
+            position: fixed;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myform");
+            var y = document.getElementById("fileUpload");
+            var a = document.getElementById("showText");
+            var b = document.getElementById("fileDownload");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                if (y.style.display = "block") {
+                    y.style.display = "none"
+                }
+            } else {
+                x.style.display = "none";
+            }
+            if (b.style.display === 'block') {
+                b.style.display = 'none';
+            }
+            
+            if (a.style.display === 'block') {
+                a.style.display = 'none';
+            }
+            
+        }
+        function myFunction2() {
+            var y = document.getElementById("fileUpload");
+            var x = document.getElementById("myform");
+            var a = document.getElementById("showText");
+            var b = document.getElementById("fileDownload");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+                if (x.style.display = "block") {
+                    x.style.display = "none"
+                }
+                if (a.style.display = "block") {
+                    a.style.display = "none"
+                }
+            } else {
+                y.style.display = "none";
+            }
+            if (b.style.display === 'none') {
+                b.style.display = 'block';
+            }
+            else {
+                b.style.display === 'none'
+            }
+        }
+        function ShowHide() {
+            var a = document.getElementById("showText");
+            var x = document.getElementById("myform");
+            if (a.style.display === "none") {
+                a.style.display = "block";
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+            } else {
+                a.style.display = "none";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div style="overflow-x:auto;">
+        <div id="myform" style="display:none">
+            <form method="POST" action="/?f=f1" onsubmit="ShowHide();">
+                <h3 style="text-align:center; color:#00daff">Please wirte your software requirement description</h3>
+                <p style="text-align:center;">
+                    <textarea name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')">Enter your description here...</textarea>
+                    <a href="#" class="Submitbutton">
+                        <span><input style="font-size: 15px;" type="submit" value="Submit" "  /></span>
+                    </a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <div style="overflow-x:auto;">
+        <div id="fileUpload" style="display:none">
+            <h3 style="text-align:left; color:#00daff">Only text file accepted, please provide text file seperated by new line.</h3>
+            <form action="/?f=f2" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".txt" />
+                <input type="submit" value="Upload">
+                
+            </form>
+        </div>
+    </div>
+    <div style="overflow-y:auto;">
+        <div class="menuButtons">
+            <button class="button button1" onclick="myFunction()">Single Text Classification</button>
+            <button class="button button2" onclick="myFunction2()">Bulk Text Classification</button>
+        </div>
+    </div>
+
+    <div id="showText" style="text-align:center; font-size:33px;">
+        <p> {{name}} </p>
+    </div>
+   <div id="fileDownload" >
+       {% if name %}
+            <a href="/download"><button class='btn btn-default'>Download</button></a>
+       {% endif %}
+    </div>
+</body>
+</html>

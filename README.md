@@ -1,3 +1,5 @@
+An API to predict the risk category based upon the user requirement.
+
 # SoftwareRequirementClassifier
     This is a Flask API that I will keep improving with new features and functionalities. This is a deep learning based classification API which focus on making software requirement identification easy and fast.
 

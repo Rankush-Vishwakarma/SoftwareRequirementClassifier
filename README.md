@@ -1,7 +1,22 @@
 An API to predict the risk category based upon the user requirement.
 
+
 # SoftwareRequirementClassifier
     This is a Flask API that I will keep improving with new features and functionalities. This is a deep learning based classification API which focus on making software requirement identification easy and fast.
+
+Prioritizing requirements based on risk since it is impossible to test everything. 
+Risk-based testing is testing based on the risk of failure and mitigates the risks using test design techniques. 
+A Product quality risk can be defined as a potential problem with product quality. 
+Product quality risks include  
+Functional risks 
+Non-functional performance risks 
+Non-functional usability risks 
+Non-Functional Security Risks
+Non-Functional Reliability Risks
+Risk analysis is to be done to evaluate the probability (likelihood) and impact of each risk. Then, the risks are prioritized 
+High Risks require Extensive Testing 
+Low Risks require only Cursory Testing 
+![image](https://github.com/Rankush-Vishwakarma/SoftwareRequirementClassifier/assets/96487589/457479a8-e1fb-4319-96ab-864d5648e3ee)
 
 # Dependencies
     1. Python - Programming Language

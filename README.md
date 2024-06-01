@@ -9,14 +9,13 @@ Risk-based testing is testing based on the risk of failure and mitigates the ris
 A Product quality risk can be defined as a potential problem with product quality. 
 Product quality risks include  
 Functional risks 
-Non-functional performance risks 
-Non-functional usability risks 
-Non-Functional Security Risks
-Non-Functional Reliability Risks
+	Non-functional performance risks 
+	Non-functional usability risks 
+	Non-Functional Security Risks
+	Non-Functional Reliability Risks
 Risk analysis is to be done to evaluate the probability (likelihood) and impact of each risk. Then, the risks are prioritized 
-High Risks require Extensive Testing 
-Low Risks require only Cursory Testing 
-![image](https://github.com/Rankush-Vishwakarma/SoftwareRequirementClassifier/assets/96487589/457479a8-e1fb-4319-96ab-864d5648e3ee)
+	High Risks require Extensive Testing 
+	Low Risks require only Cursory Testing 
 
 # Dependencies
     1. Python - Programming Language

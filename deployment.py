@@ -75,7 +75,7 @@ def cleanText_(text):
   return str(text)
 
 def load_Model_Tokenizer():
-  model = tf.keras.models.load_model(r'C:\Users\rvishwakar23\Desktop\data scientist\risk\risk_model_all-20220528T113844Z-001\risk_model_all')
+  model = tf.keras.models.load_model(r'risk_model_all')
   with open('tokenizer.pkl','rb') as token:
     tokenizer = pickle.load(token)
   return model , tokenizer
